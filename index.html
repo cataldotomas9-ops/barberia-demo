@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Corte y Filo | Barbería en Bahía Blanca (demo)</title>
+<meta name="description" content="Landing de ejemplo para una barbería: servicios, precios, horarios y contacto.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#E6ECEA;--ink:#0E1F1A;--green:#143D33;--brass:#B8893B;--mut:#4A5E56;--card:#FFFFFF;--line:#C9D4D0}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 'DM Sans',system-ui,sans-serif}
+a{color:inherit}
+.wrap{max-width:1040px;margin-inline:auto;padding-inline:20px}
+h1,h2,h3{font-family:'Young Serif',Georgia,serif;line-height:1.1;margin:0;text-wrap:balance}
+header{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.logo{font:400 1.35rem 'Young Serif',serif;text-decoration:none}
+.nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+.nav a{text-decoration:none;font-weight:500}
+.btn{display:inline-block;background:var(--green);color:#fff;padding:13px 22px;border-radius:6px;text-decoration:none;font-weight:700}
+.btn.alt{background:transparent;color:var(--green);border:2px solid var(--green)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-block:64px}
+.hero h1{font-size:clamp(2.3rem,6vw,4rem)}
+.hero p{max-width:34ch;color:var(--mut);font-size:1.15rem}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.poster{padding:28px;aspect-ratio:4/5;background:var(--green);border-radius:10px;display:grid;place-items:center;color:var(--brass);position:relative;overflow:hidden}
+.poster svg{width:62%;height:auto}
+.poster span{position:absolute;bottom:18px;font:600 .9rem 'DM Sans';letter-spacing:.18em;text-transform:uppercase;color:#E9DFC3}
+section{padding-block:56px}section:nth-of-type(even){background:var(--card)}
+section h2{font-size:clamp(1.8rem,4vw,2.4rem);margin-bottom:24px}
+.prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:22px}
+.card h3{font-size:1.25rem;margin-bottom:6px}
+.card p{margin:0 0 12px;color:var(--mut)}
+.price{font:400 1.6rem 'Young Serif',serif;color:var(--green)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px}
+table{width:100%;border-collapse:collapse}
+td{padding:9px 0;border-bottom:1px solid var(--line)}
+td:last-child{text-align:right;font-weight:500}
+form{display:grid;gap:12px}
+label{display:grid;gap:4px;font-weight:500}
+input,select{font:inherit;padding:12px;border:1px solid var(--line);border-radius:6px;background:#fff;min-width:0}
+input:focus-visible,select:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid var(--brass);outline-offset:2px}
+button{font:inherit;border:0;cursor:pointer}
+#ok{display:none;color:var(--green);font-weight:700}
+footer{background:var(--green);color:#E9DFC3;padding-block:28px;font-size:.95rem}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding-block:36px}.poster{aspect-ratio:16/10}.nav ul{display:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="logo" href="#">Corte y Filo</a>
+<ul><li><a href="#servicios">Servicios</a></li><li><a href="#horarios">Horarios</a></li><li><a href="#turno">Turno</a></li></ul>
+<a class="btn" href="#turno">Pedir turno</a></div></header>
+
+<main>
+<div class="wrap hero">
+  <div>
+    <h1>Un buen corte no se apura.</h1>
+    <p>Cortes clásicos, barba a navaja y atención con turno, para que no pierdas la tarde esperando.</p>
+    <div class="cta"><a class="btn" href="#turno">Reservar turno</a><a class="btn alt" href="#servicios">Ver precios</a></div>
+  </div>
+  <div class="poster" aria-hidden="true">
+    <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"><circle cx="34" cy="86" r="14"/><circle cx="86" cy="86" r="14"/><path d="M45 76 84 24M75 76 36 24"/></svg>
+    <span>Desde 2014</span>
+  </div>
+</div>
+
+<section id="servicios"><div class="wrap">
+  <h2>Servicios y precios</h2>
+  <div class="prices">
+    <div class="card"><h3>Corte clásico</h3><p>Tijera y máquina, lavado incluido.</p><div class="price">$12.000</div></div>
+    <div class="card"><h3>Barba a navaja</h3><p>Toalla caliente y perfilado.</p><div class="price">$9.000</div></div>
+    <div class="card"><h3>Corte y barba</h3><p>El combo completo, 60 minutos.</p><div class="price">$19.000</div></div>
+    <div class="card"><h3>Corte infantil</h3><p>Hasta 12 años.</p><div class="price">$9.500</div></div>
+  </div>
+</div></section>
+
+<section id="horarios"><div class="wrap cols">
+  <div><h2>Horarios</h2>
+    <table>
+      <tr><td>Lunes a viernes</td><td>9:00 a 20:00</td></tr>
+      <tr><td>Sábados</td><td>9:00 a 17:00</td></tr>
+      <tr><td>Domingos</td><td>Cerrado</td></tr>
+    </table></div>
+  <div><h2>Dónde estamos</h2>
+    <p>Av. Alem 1234, Bahía Blanca.<br>A dos cuadras de la plaza.</p>
+    <p>Aceptamos efectivo, transferencia y tarjetas.</p></div>
+</div></section>
+
+<section id="turno"><div class="wrap cols">
+  <div><h2>Pedí tu turno</h2><p>Completá el formulario y te confirmamos por WhatsApp en el día.</p></div>
+  <form id="f">
+    <label>Nombre<input name="n" required autocomplete="name"></label>
+    <label>Servicio<select name="s"><option>Corte clásico</option><option>Barba a navaja</option><option>Corte y barba</option><option>Corte infantil</option></select></label>
+    <label>Día preferido<input type="date" name="d" required></label>
+    <button class="btn" type="submit">Enviar pedido</button>
+    <div id="ok" role="status">Listo, recibimos tu pedido. Esta es una demo: no se envió nada.</div>
+  </form>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>Corte y Filo</span><span>Sitio de ejemplo hecho por Tomás Cataldo</span></div></footer>
+<script>
+const f=document.getElementById('f'),d=f.d;d.min=new Date().toISOString().slice(0,10);
+f.addEventListener('submit',e=>{e.preventDefault();document.getElementById('ok').style.display='block';f.reset();d.min=new Date().toISOString().slice(0,10)});
+</script>
+</body>
+</html>
